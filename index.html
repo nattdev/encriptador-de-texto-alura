@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Codificador de texto">
+		<link rel="stylesheet" href="styles.css" type="text/css">
+	</head>
+	<body>
+		<div class="logo">
+			<img src="images/logo.svg" alt="Logo de Alura Latam">
+		</div>
+
+		<div class="content">
+			<div id="entrada-codificador">
+				<textarea id="entrada-texto" placeholder="Ingrese el texto aquí"></textarea>	
+				<div class="controls">
+					<p><img src="images/icon-exclamation.svg" alt="icono de exclamación">Solo letras minúsculas y sin acentos</p>
+					<div class="buttons">
+						<button id="encriptar-btn">Encriptar</button>
+						<button id="desencriptar-btn">Desencriptar</button>
+					</div>
+				</div>
+			</div>
+			<div id="salida-codificador">
+				<textarea id="salida-texto" class="invisible"  readonly></textarea>
+				<div id="not-found">
+					<img src="images/not-found.jpg" alt="Message Not Found">
+					<p>This a first Paragraph</p>
+					<p>This a first Paragraph</p>
+				</div>
+				<button id="copy-btn">Copiar</button>
+			</div>
+		</div>
+
+		<footer>
+			<p>This is a footer of the Page</p>
+		</footer>
+		<script src="main.js"></script>
+	</body>
+</html>
