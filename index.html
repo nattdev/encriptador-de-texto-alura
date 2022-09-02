@@ -7,31 +7,31 @@
 		<link rel="stylesheet" href="styles.css" type="text/css">
 	</head>
 	<body>
-		<div class="logo">
-			<img src="images/logo.svg" alt="Logo de Alura Latam">
-		</div>
+		<header>
+			<img id="logo" src="images/logo.svg" alt="Logo de Alura Latam">
+		</header>
 
-		<div class="content">
-			<div id="entrada-codificador">
+		<main id="content">
+			<section id="entrada-codificador">
 				<textarea id="entrada-texto" placeholder="Ingrese el texto aquí"></textarea>	
 				<div class="controls">
 					<p><img src="images/icon-exclamation.svg" alt="icono de exclamación">Solo letras minúsculas y sin acentos</p>
-					<div class="buttons">
-						<button id="encriptar-btn">Encriptar</button>
-						<button id="desencriptar-btn">Desencriptar</button>
+					<div id="botones">
+						<button id="encriptar-btn" class="buttons">Encriptar</button>
+						<button id="desencriptar-btn" class="buttons">Desencriptar</button>
 					</div>
 				</div>
-			</div>
-			<div id="salida-codificador">
+			</section>
+			<section id="salida-codificador">
 				<textarea id="salida-texto" class="invisible"  readonly></textarea>
 				<div id="not-found">
 					<img src="images/not-found.jpg" alt="Message Not Found">
-					<p>This a first Paragraph</p>
-					<p>This a first Paragraph</p>
+					<p>Ningún mensaje fue encontrado</p>
+					<p>Ingresa el texto que desees encriptar o desencriptar.</p>
 				</div>
-				<button id="copy-btn">Copiar</button>
-			</div>
-		</div>
+				<button id="copy-btn" class="buttons">Copiar</button>
+			</section>
+		</main>
 
 		<footer>
 			<p>This is a footer of the Page</p>
