@@ -8,33 +8,34 @@
 	</head>
 	<body>
 		<header>
-			<img id="logo" src="images/logo.svg" alt="Logo de Alura Latam">
+			<img class="logo" src="images/logo.svg" alt="Logo de Alura Latam">
 		</header>
 
-		<main id="content">
-			<section id="entrada-codificador">
+		<main class="content">
+			<section class="input-container" >
 				<textarea id="entrada-texto" placeholder="Ingrese el texto aquí"></textarea>	
 				<div class="controls">
 					<p><img src="images/icon-exclamation.svg" alt="icono de exclamación">Solo letras minúsculas y sin acentos</p>
-					<div id="botones">
+					<div class="btns-container">
 						<button id="encriptar-btn" class="buttons">Encriptar</button>
 						<button id="desencriptar-btn" class="buttons">Desencriptar</button>
 					</div>
 				</div>
 			</section>
-			<section id="salida-codificador">
+			<section class="output-container">
 				<textarea id="salida-texto" class="invisible"  readonly></textarea>
-				<div id="not-found">
+				<div class="not-found">
 					<img src="images/not-found.jpg" alt="Message Not Found">
 					<p>Ningún mensaje fue encontrado</p>
 					<p>Ingresa el texto que desees encriptar o desencriptar.</p>
 				</div>
 				<button id="copy-btn" class="buttons">Copiar</button>
+				<p>Texto Copiado!</p>
 			</section>
 		</main>
 
 		<footer>
-			<p>This is a footer of the Page</p>
+			<p>Desarrollado por <a href="https://github.com/nattdev">nattdev <img src="images/github-icon.svg"></a> | Diseño por Alura © 2022 Encriptador de Texto</p>
 		</footer>
 		<script src="main.js"></script>
 	</body>

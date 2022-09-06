@@ -3,7 +3,7 @@ let texto_encriptado;
 
 let entradaTexto = document.getElementById("entrada-texto");
 let salidaTexto = document.getElementById("salida-texto");
-let notFoundMessage = document.getElementById("not-found");
+let notFoundMessage = document.querySelector(".not-found");
 
 let encriptButton = document.getElementById("encriptar-btn");
 let desencriptButton = document.getElementById("desencriptar-btn");
@@ -85,9 +85,4 @@ function desencriptar (texto) {
 	return textoDesencriptado;
 
 }
-
-
-
-
-
 

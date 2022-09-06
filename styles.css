@@ -8,19 +8,23 @@ body {
 	padding: 0;
 }
 
-main#content {
+main.content {
 	display: flex;
 	width: 100%;
 	height: 90%;
 	flex-wrap: wrap;
 }
 
+.content section {
+	box-sizing: border-box;
+	position: relative;
+}
 
 textarea, button {
 	font-family: inherit;
 }
 
-section#entrada-codificador {
+.input-container {
 	display: flex;
 	flex-direction: column;
 	flex-grow: 2;
@@ -48,7 +52,7 @@ section#entrada-codificador {
 	cursor: pointer;
 }
 
-div#botones {
+.btns-container {
 	display: flex;	
 }
 
@@ -69,7 +73,7 @@ div#botones {
 	color:#0A3871;
 }
 
-section#salida-codificador {
+.output-container {
 	display: flex;
 	flex-direction: column;
 	background: #ffffff;
@@ -84,7 +88,7 @@ section#salida-codificador {
 	text-align: center;
 }
 
-textarea#entrada-texto, textarea#salida-texto {
+textarea {
 	width: 100%;
 	height: 100%;
 	resize: none;
@@ -98,6 +102,7 @@ textarea#entrada-texto {
 	font-size: 32px;
 	line-height: 150%;
 	color: #0A3871;
+	max-width: 532px;
 }
 
 textarea#salida-texto {
@@ -106,21 +111,36 @@ textarea#salida-texto {
 	color: #495057;
 }
 
-#not-found p {
+.not-found img {
+	width: 100%;
+	max-width: 336px;
+}
+
+.not-found p {
 	padding: 0 38px;
 }
 
-#not-found p:nth-of-type(1) {
+.not-found p:nth-of-type(1) {
 	font-weight: bold;
 	font-size: 24px;
 	line-height: 29px;
 	color: #343A40;
 }
 
-#not-found p:nth-of-type(2) {
+.not-found p:nth-of-type(2) {
 	font-size: 16px;
 	line-height: 24px;
-	color: #495057
+	color: #495057;
+}
+
+.output-container p:last-child{
+	display: none;
+	position: absolute;
+	bottom: 2%;
+	width: 100%;
+	margin: 0;
+	left: 0;
+	font-size: 0.9em;
 }
 
 .invisible {
@@ -131,8 +151,57 @@ textarea#salida-texto {
 	display: block;
 }
 
-header img#logo {
+.logo {
 	position: absolute;
 	margin: 40px;
 }
 
+footer {
+	text-align: center;
+	margin: 0 30px;
+}
+
+footer p {
+	position: relative;
+	top: 36px;
+	margin: 0;	
+	color: #495057;
+}
+
+footer p img {
+	vertical-align: bottom;
+}
+
+
+@media screen and (max-width:1293px) {
+
+	body {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.logo {
+		position: relative; 
+		margin: 30px calc(5% - 44px);
+	}
+	
+	main.content {
+		height: auto;
+		flex-grow: 2;
+	}
+
+	.content section {
+		margin: 10px 5%; 
+		width: 100%;
+		max-width: unset;
+	}
+	
+	footer {
+		font-size: 0.8em;
+		flex-grow: 1;
+	}
+
+	footer p {
+		padding: 0 0 20px;
+	}
+}
