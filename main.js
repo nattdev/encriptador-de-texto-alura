@@ -9,6 +9,8 @@ let encriptButton = document.getElementById("encriptar-btn");
 let desencriptButton = document.getElementById("desencriptar-btn");
 let copyButton = document.getElementById("copy-btn");
 
+let copyMessage = document.querySelector(".output-container > p");
+
 encriptButton.addEventListener("click", () => {
 	texto_encriptado = encriptar(entradaTexto.value);
 	salidaTexto.value = texto_encriptado;
@@ -24,7 +26,10 @@ desencriptButton.addEventListener("click", () => {
 
 copyButton.addEventListener("click", () => {
 	copyToClipboard();
-
+	if(salidaTexto.value != ""){
+		copyMessage.style.display = "unset";
+		setTimeout(() => {copyMessage.style.display = "none"} , 1000);
+	}
 });
 
 //Copy To the clipboard
@@ -32,7 +37,6 @@ copyButton.addEventListener("click", () => {
 function copyToClipboard() {
 	salidaTexto.select();
 	document.execCommand("copy");
-	console.log("copiar");
 }
 
 
@@ -45,8 +49,6 @@ function encriptar (texto) {
 
 	for (let i = 0; i  < textoDesencriptado.length; i++) {
 		letter = textoDesencriptado[i];
-		console.log(letter);
-		console.log(typeof(letter));
 		switch (letter) {
 			case "a":
 				textoDesencriptado[i] = "ai";

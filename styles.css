@@ -133,7 +133,7 @@ textarea#salida-texto {
 	color: #495057;
 }
 
-.output-container p:last-child{
+.output-container > p{
 	display: none;
 	position: absolute;
 	bottom: 2%;
