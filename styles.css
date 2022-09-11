@@ -12,7 +12,7 @@ main.content {
 	display: flex;
 	width: 100%;
 	height: 90%;
-	flex-wrap: wrap;
+	/*flex-wrap: wrap;*/
 }
 
 .content section {
@@ -95,6 +95,7 @@ textarea {
 	outline: none;
 	border: none;
 	margin: 0;
+	min-height: 6.5em;
 }
 
 textarea#entrada-texto {
@@ -112,6 +113,7 @@ textarea#salida-texto {
 	color: #495057;
 	box-sizing: border-box;
 	margin-bottom: 12px;
+	min-height: 7.5em;
 }
 
 #salida-texto::selection {
@@ -181,7 +183,7 @@ footer p img {
 }
 
 
-@media screen and (max-width:1293px) {
+@media screen and (max-width:1120px) {
 
 	body {
 		display: flex;
@@ -199,11 +201,15 @@ footer p img {
 	}
 
 	.content section {
-		margin: 5px 5%; 
+		margin: 0px 5%;
 		width: 100%;
-		max-width: unset;
+		/*max-width: unset;*/
 	}
 	
+	section.output-container {
+		margin-bottom: -32px;
+	}
+
 	footer {
 		font-size: 0.8em;
 		flex-grow: 1;
@@ -211,5 +217,30 @@ footer p img {
 
 	footer p {
 		padding: 0 0 20px;
+	}
+}
+
+@media screen and (max-width: 830px) {
+	.logo {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+
+	main.content {
+		flex-wrap: wrap;
+	}
+
+	.content section {
+		max-width: unset;
+		margin: 10px 5%;
+	}
+
+	.not-found img {
+		display: none;
+	}
+
+	textarea#entrada-texto {
+		max-width: unset;
+		min-height: calc(6em + 304px);
 	}
 }
