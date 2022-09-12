@@ -169,6 +169,7 @@ textarea#salida-texto {
 footer {
 	text-align: center;
 	margin: 0 30px;
+	font-size: 0.8em;
 }
 
 footer p {
